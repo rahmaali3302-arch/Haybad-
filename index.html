@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="so" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Haybad Supermarket - Wax kasta oo aad maalin kasta u baahan tahay, albaabkaaga ayaan kuugu keenaynaa. Ka dukaamayso raashin cusub, khudaar, miro, iyo alaabta guriga.">
+  <meta name="theme-color" content="#059669">
+  <title>Haybad Supermarket | Wax Kasta Oo Aad U Baahan Tahay</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notification Bar -->
+  <aside class="top-bar" aria-label="Ogeysiiska sare">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="badge-free-delivery"><i class="fa-solid fa-truck-fast"></i> Delivery Bilaash ah</span>
+        <span class="top-bar-text">Dalabyada ka sarreeya <strong>$30.00</strong> waa delivery bilaash ah!</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+252612345678" class="top-bar-link"><i class="fa-solid fa-phone"></i> +252 (61) 234-5678</a>
+        <span class="divider">|</span>
+        <span class="top-bar-badge"><i class="fa-solid fa-clock"></i> 7:00 AM - 11:00 PM</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Header & Navigation -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="Haybad Supermarket Bogga Hore">
+        <div class="logo-icon-wrapper">
+          <i class="fa-solid fa-basket-shopping logo-icon"></i>
+          <span class="logo-leaf"><i class="fa-solid fa-leaf"></i></span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Haybad<span class="logo-highlight">Mart</span></span>
+          <span class="logo-slogan">Dhadhan & Tayo La Amini Karo</span>
+        </div>
+      </a>
+
+      <!-- Quick Search Bar (Header) -->
+      <div class="header-search-box">
+        <form id="headerSearchForm" onsubmit="event.preventDefault();">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="headerSearchInput" placeholder="Raadi raashin, khudaar, miro, cabitaan..." autocomplete="off">
+          <button type="button" id="clearHeaderSearch" class="btn-clear-search hidden" title="Nadiifi baaritaanka">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Menu-ga Guud">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Bogga Hore</a></li>
+          <li class="nav-item"><a href="#categories" class="nav-link">Qaybaha</a></li>
+          <li class="nav-item"><a href="#products" class="nav-link">Alaabta</a></li>
+          <li class="nav-item"><a href="#delivery" class="nav-link">Delivery</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Annaga Nagu Saabsan</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Xiriirka</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <!-- Order Tracking Quick Button -->
+        <button type="button" class="btn-action-outline" id="btnOpenTrackModal" title="La Soco Xaaladda Dalabkaaga">
+          <i class="fa-solid fa-route"></i>
+          <span class="btn-text-desktop">La Soco Dalabka</span>
+        </button>
+
+        <!-- Shopping Cart Trigger Button -->
+        <button type="button" class="btn-cart-trigger" id="btnOpenCart" aria-label="Fur Gaariga Wax Iibsiga">
+          <div class="cart-icon-wrapper">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count-badge" id="cartCountBadge">0</span>
+          </div>
+          <div class="cart-text-details">
+            <span class="cart-label">Gaariga:</span>
+            <span class="cart-total-header" id="cartTotalHeader">$0.00</span>
+          </div>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-mobile-toggle" id="btnMobileToggle" aria-label="Fur Menu-ga Telefoonka">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Search Bar (Only visible on small screens) -->
+  <div class="mobile-search-wrapper">
+    <div class="container">
+      <div class="mobile-search-inner">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="mobileSearchInput" placeholder="Raadi raashin, khudaar, miro...">
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-pill-tag">
+            <i class="fa-solid fa-sparkles"></i> Supermarket-ka #1 ee Casriga ah
+          </div>
+          <h1 class="hero-title">
+            Wax kasta oo aad maalin kasta u baahan tahay, <span class="highlight-text">albaabkaaga ayaan kuugu keenaynaa.</span>
+          </h1>
+          <p class="hero-description">
+            Ku soo dhowow <strong>Haybad Supermarket</strong>. Waxaan kuu heynaa raashin tayo sare leh, khudaar beeraha laga keenay, hilib cusub, iyo alaabta nadaafadda ee gurigaaga oo dhan. Dalbo hadda adigoo gurigaaga jooga, 30-45 daqiiqo gudahoodna ku hel!
+          </p>
+
+          <div class="hero-buttons-group">
+            <a href="#products" class="btn btn-primary btn-lg" id="btnHeroShopNow">
+              <i class="fa-solid fa-cart-shopping"></i> Alaabta Iibso
+            </a>
+            <a href="#delivery" class="btn btn-outline-success btn-lg" id="btnHeroOrderDelivery">
+              <i class="fa-solid fa-motorcycle"></i> Dalbo Delivery
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero-features-list">
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-check-double"></i>
+              <span>100% Dabiici & Tayo Leh</span>
+            </div>
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-bolt"></i>
+              <span>30-45 Daqiiqo Delivery</span>
+            </div>
+            <div class="hero-feature-item">
+              <i class="fa-solid fa-money-bill-wave"></i>
+              <span>Kaash ama EVC Plus</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" 
+                 alt="Khudaar iyo raashin cusub oo yaalla Haybad Supermarket" 
+                 class="hero-img"
+                 onerror="this.src='https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=800&q=80';">
+            <div class="hero-floating-badge badge-top">
+              <div class="badge-icon"><i class="fa-solid fa-tags"></i></div>
+              <div class="badge-info">
+                <strong>Qiimo-dhimis</strong>
+                <span>Ilaa 25% Toddobaadkan</span>
+              </div>
+            </div>
+            <div class="hero-floating-badge badge-bottom">
+              <div class="badge-icon bg-emerald"><i class="fa-solid fa-stopwatch"></i></div>
+              <div class="badge-info">
+                <strong>Delivery Degdeg ah</strong>
+                <span>30 - 45 Daqiiqo Gudahood</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROMOTIONAL OFFERS / SPECIAL BANNERS -->
+    <section class="promo-section" aria-label="Qiimo-dhimisyo Gaar ah">
+      <div class="container">
+        <div class="promo-grid">
+          
+          <div class="promo-card promo-card-1">
+            <div class="promo-content">
+              <span class="promo-badge">Dhimis 20%</span>
+              <h3>Khudaarta & Miraha Cusub</h3>
+              <p>Toos uga timid beero maxalli ah maalin kasta.</p>
+              <button type="button" class="btn-promo-action" onclick="filterByCategory('Khudaarta cusub')">
+                Baadh Khudaarta <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="promo-img-box">
+              <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=300&q=80" alt="Khudaar cusub">
+            </div>
+          </div>
+
+          <div class="promo-card promo-card-2">
+            <div class="promo-content">
+              <span class="promo-badge bg-orange">Bilaash Delivery</span>
+              <h3>Xirmada Raashinka Qoyska</h3>
+              <p>Bariis, Bur, Baasto, Saliid & Sonkor tayo leh.</p>
+              <button type="button" class="btn-promo-action" onclick="filterByCategory('Raashinka iyo cuntada')">
+                Iibso Raashinka <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="promo-img-box">
+              <img src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&w=300&q=80" alt="Raashin">
+            </div>
+          </div>
+
+          <div class="promo-card promo-card-3">
+            <div class="promo-content">
+              <span class="promo-badge bg-teal">Cusub</span>
+              <h3>Caanaha & Foornada</h3>
+              <p>Caano geel dabiici ah iyo rooti cusub maalin kasta.</p>
+              <button type="button" class="btn-promo-action" onclick="filterByCategory('Caanaha iyo waxyaabaha laga sameeyo')">
+                Eeg Caanaha <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div class="promo-img-box">
+              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=300&q=80" alt="Caanaha iyo Rootiga">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-subtitle"><i class="fa-solid fa-layer-group"></i> Qaybaha Supermarket-ka</span>
+          <h2 class="section-title">Kala Dooro Qaybaha Alaabta</h2>
+          <p class="section-desc">Waxaan si nidaamsan kuugu diyaarinnay 10 qaybood oo kala duwan si aad si fudud ugu hesho wax kasta oo aad raadinayso.</p>
+        </div>
+
+        <div class="categories-grid" id="categoriesGrid">
+          <!-- Dynamically generated or statically loaded by script for 10 categories -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION (SEARCH, FILTER & DISPLAY) -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        
+        <div class="section-header">
+          <div>
+            <span class="section-subtitle"><i class="fa-solid fa-basket-shopping"></i> Alaabta Diyaar Ka Ah Supermarket-ka</span>
+            <h2 class="section-title">Alaabta Caanka ah & Dhammaan Badeecadaha</h2>
+          </div>
+          <div class="products-stats-badge" id="productsFoundCount">
+            Muujinaya: <strong>0</strong> alaabood
+          </div>
+        </div>
+
+        <!-- Filter & Search Controls Bar -->
+        <div class="products-controls-bar">
+          
+          <!-- Search input box in controls -->
+          <div class="search-input-group">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="productSearchInput" placeholder="Raadi magaca alaabta (tusaale: Bariis, Moos, Caano)...">
+            <button type="button" id="btnResetSearch" class="btn-icon-clear hidden" title="Nadiifi">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Sorting Dropdown -->
+          <div class="sort-group">
+            <label for="productSortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Kala Saacid:</label>
+            <select id="productSortSelect" class="form-select">
+              <option value="featured">Ugu Caansan (Caadi)</option>
+              <option value="price-low">Qiimaha: Ka Hooseeya ilaa Ka Sareeya</option>
+              <option value="price-high">Qiimaha: Ka Sareeya ilaa Ka Hooseeya</option>
+              <option value="name-asc">Magaca: A ilaa Z</option>
+              <option value="name-desc">Magaca: Z ilaa A</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Category Filter Pills (Horizontal scrollable on mobile) -->
+        <div class="category-filter-pills" id="categoryFilterPills" role="tablist" aria-label="Shaandhada Qaybaha">
+          <!-- Pills will be generated by JavaScript -->
+        </div>
+
+        <!-- Products Grid Container -->
+        <div class="products-grid" id="productsGrid" aria-live="polite">
+          <!-- Products Cards will be dynamically rendered here -->
+        </div>
+
+        <!-- Empty Products State (When no search matches) -->
+        <div class="empty-products-state hidden" id="emptyProductsState">
+          <div class="empty-icon-circle">
+            <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+          </div>
+          <h3>Wax alaab ah lama helin!</h3>
+          <p id="emptyProductsMessage">Ma jiro wax alaab ah oo u dhigma raadintaada. Fadlan hubi higgaadda ama eeg qayb kale.</p>
+          <button type="button" class="btn btn-primary" id="btnResetFilters">
+            <i class="fa-solid fa-rotate-left"></i> Soo bandhig dhammaan alaabta
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US (SABABTA AAD NOO DOORANAYSO) -->
+    <section class="section why-us-section" id="whyUs">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-subtitle"><i class="fa-solid fa-award"></i> Maxaa Haybad Supermarket Gaar Ka Dhigay?</span>
+          <h2 class="section-title">Sababta Macaamiishu Noo Doortaan</h2>
+          <p class="section-desc">Waxaan dhisnay adeeg ku salaysan xaqsoor, daryeelka macmiilka, iyo alaab tayo leh oo dammaanad leh.</p>
+        </div>
+
+        <div class="features-grid">
+          
+          <div class="feature-card">
+            <div class="feature-icon bg-light-green">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h3>100% Cusub & Tayo La Hubiyey</h3>
+            <p>Khudaarta, miraha iyo hilibka maalin kasta ayaan subaxdii hore keenaa, annagoo hubinayna nadaafadda ugu sarraysa.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-light-blue">
+              <i class="fa-solid fa-truck-ramp-box"></i>
+            </div>
+            <h3>Delivery Degdeg Ah (30-45 Daqiiqo)</h3>
+            <p>Mootooyinkayada dheereeya waxay alaabta kuugu keenayaan albaabka gurigaaga iyadoo qabow ama kulul sidii aad rabtay.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-light-amber">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <h3>Qiimo Macquul Ah & Dhimisyo</h3>
+            <p>Qiimayaasheennu waa kuwa ugu hooseeya suuqa, waxaana mar kasta kuu diyaarsan qiimo-dhimisyo gaar ah.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-light-purple">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Lacag-bixin Fudud & Aamin Ah</h3>
+            <p>Waxaad ku bixin kartaa Kaash marka aad alaabta gacanta ku dhigto, ama Mobile Money (EVC Plus, Zaad, Sahal, e-Dahab).</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DELIVERY SERVICE DETAILS SECTION -->
+    <section class="section delivery-section" id="delivery">
+      <div class="container">
+        <div class="delivery-card-wrapper">
+          
+          <div class="delivery-info-side">
+            <span class="section-subtitle"><i class="fa-solid fa-location-dot"></i> Adeegga Gaarsiinta Guriga</span>
+            <h2 class="delivery-title">Adeegga Delivery-ga ee Haybad Supermarket</h2>
+            <p class="delivery-text">
+              Kama walwalaysid cimilada, kuleylka ama saxmadda waddooyinka. Haybad Supermarket waxay kuugu adeegaysaa qaab casri ah. Xulo alaabta aad doonayso, foomka buuxi, inta kale annaga ayaa dusha u ridanayna!
+            </p>
+
+            <div class="delivery-specs-grid">
+              
+              <div class="spec-item">
+                <div class="spec-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                <div>
+                  <strong>Waqtiga Keenista</strong>
+                  <span>30 ilaa 45 Daqiiqo gudahood</span>
+                </div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-icon"><i class="fa-solid fa-receipt"></i></div>
+                <div>
+                  <strong>Kharashka Caadiga ah</strong>
+                  <span id="standardDeliveryText">$2.00 oo keliya</span>
+                </div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-icon"><i class="fa-solid fa-gift"></i></div>
+                <div>
+                  <strong>Delivery Bilaash Ah</strong>
+                  <span id="freeDeliveryRuleText">Dalabyada ka sarreeya $30.00</span>
+                </div>
+              </div>
+
+              <div class="spec-item">
+                <div class="spec-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div>
+                  <strong>Goobaha Aan Tagno</strong>
+                  <span>Dhammaan Degmooyinka Magaalada</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="delivery-actions">
+              <button type="button" class="btn btn-primary" onclick="openCheckoutModal()">
+                <i class="fa-solid fa-truck-arrow-right"></i> Hadda Dalbo Delivery
+              </button>
+              <button type="button" class="btn btn-outline" onclick="openTrackModal()">
+                <i class="fa-solid fa-route"></i> Hubi Xaaladda Dalab Hore
+              </button>
+            </div>
+          </div>
+
+          <div class="delivery-steps-side">
+            <h3 class="steps-side-title"><i class="fa-solid fa-list-check"></i> Sida Dalabku U Shaqeeyo:</h3>
+            
+            <ol class="steps-flow-list">
+              <li class="step-flow-item">
+                <div class="step-flow-number">1</div>
+                <div class="step-flow-body">
+                  <strong>Dooro Alaabtaada</strong>
+                  <p>Ku dar gaariga alaabaha aad u baahan tahay adigoo isticmaalaya badhanka "Ku dar Gaariga".</p>
+                </div>
+              </li>
+
+              <li class="step-flow-item">
+                <div class="step-flow-number">2</div>
+                <div class="step-flow-body">
+                  <strong>Geli Cinwaankaaga & Telefoonka</strong>
+                  <p>Buuxi foomka fudud ee delivery-ga oo qor goobta aad joogto iyo tilmaamo dheeraad ah.</p>
+                </div>
+              </li>
+
+              <li class="step-flow-item">
+                <div class="step-flow-number">3</div>
+                <div class="step-flow-body">
+                  <strong>Xaqiiji oo Hel Lambarka Dalabka</strong>
+                  <p>Waxaad helaysaa nambar aqoonsi gaar ah (Order ID) oo aad ku la socon karto tallaabo tallaabo.</p>
+                </div>
+              </li>
+
+              <li class="step-flow-item">
+                <div class="step-flow-number">4</div>
+                <div class="step-flow-body">
+                  <strong>Ku Hel Albaabkaaga</strong>
+                  <p>Wadihii mootada ayaa kugu soo gaarsiinaya alaabta si degdeg ah oo nadaafad leh.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=700&q=80" 
+                 alt="Gudaha Haybad Supermarket" 
+                 class="about-img"
+                 onerror="this.src='https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80';">
+            <div class="about-experience-card">
+              <span class="exp-number">5+</span>
+              <span class="exp-text">Sano oo aan u adeegaynay bulshada Soomaaliyeed</span>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-subtitle"><i class="fa-solid fa-circle-info"></i> Annaga Nagu Saabsan</span>
+            <h2 class="section-title">Haybad Supermarket: Dukaanka Qoyskaaga</h2>
+            <p class="about-desc">
+              Haybad Supermarket waxaa la aasaasay si ay macaamiisha Soomaaliyeed u helaan waayo-aragnimo dukaamaysi oo casri ah, nadiif ah, oo la isku halayn karo. Waxaan aaminsannahay in cunto caafimaad leh iyo alaab tayo leh ay yihiin asalka qoys faraxsan.
+            </p>
+
+            <div class="about-stats-row">
+              <div class="stat-box">
+                <span class="stat-num">500+</span>
+                <span class="stat-title">Alaab Diyaar Ah</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">10,000+</span>
+                <span class="stat-title">Macaamiil Faraxsan</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">99.8%</span>
+                <span class="stat-title">Ku Qanacsanaanta</span>
+              </div>
+            </div>
+
+            <div class="about-quote">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>“Ujeedkayagu ma ahan oo keliya inaan alaab iibinno, balse waa inaan nolol maalmeedkaaga ka dhigno mid fudud oo raaxo leh.”</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-subtitle"><i class="fa-solid fa-envelope-open-text"></i> Xiriirka</span>
+          <h2 class="section-title">Nagala Soo Xiriir Haybad Supermarket</h2>
+          <p class="section-desc">Su'aal ma qabtaa, ma rabtaa dalab gaar ah mise talo ayaad noo haysaa? Fariintaada noo soo dir!</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Details Cards -->
+          <div class="contact-cards-col">
+            
+            <div class="contact-info-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+              <div>
+                <h4>Telefoonka Xarunta</h4>
+                <p>+252 (61) 234-5678 / +252 (62) 987-6543</p>
+                <span class="contact-hint">Waan diyaar nahay 7:00 AM ilaa 11:00 PM</span>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <h4>WhatsApp Toos Ah</h4>
+                <p>+252 61 234 5678</p>
+                <span class="contact-hint">Fariin degdeg ah noo soo dir mar kasta</span>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Goobta Supermarket-ka</h4>
+                <p>Waddada Maka Al-Mukarama, Degmada Hodan, Muqdisho - Soomaaliya</p>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4>Email-ka Rasmiga ah</h4>
+                <p>info@haybadsupermarket.so</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-col">
+            <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+              <h3 class="form-title">Fariin Noo Soo Dir</h3>
+              
+              <div class="form-group">
+                <label for="contactName">Magacaaga oo buuxa <span class="required">*</span></label>
+                <input type="text" id="contactName" class="form-input" placeholder="Geli magacaaga" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactPhone">Lambarka Telefoonka <span class="required">*</span></label>
+                  <input type="tel" id="contactPhone" class="form-input" placeholder="61XXXXXXX" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email-kaaga (Ikhtiyaari)</label>
+                  <input type="email" id="contactEmail" class="form-input" placeholder="tusaale@gmail.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Ujeeddada Fariinta <span class="required">*</span></label>
+                <input type="text" id="contactSubject" class="form-input" placeholder="Tusaale: Dalab gaar ah ama Su'aal" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Fariintaada <span class="required">*</span></label>
+                <textarea id="contactMessage" class="form-textarea" rows="4" placeholder="Halkaan ku qor fariintaada oo faahfaahsan..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-paper-plane"></i> Dir Fariinta
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col brand-col">
+        <a href="#home" class="brand-logo footer-logo">
+          <div class="logo-icon-wrapper">
+            <i class="fa-solid fa-basket-shopping logo-icon"></i>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title text-white">Haybad<span class="logo-highlight">Mart</span></span>
+            <span class="logo-slogan text-light-green">Dhadhan & Tayo La Amini Karo</span>
+          </div>
+        </a>
+        <p class="footer-about">
+          Haybad Supermarket waa xaruntaada kowaad ee aad ka hesho raashin, khudaar cusub, iyo alaabta guriga oo dhan. Waxaan kuugu keenaynaa albaabkaaga adigoo gurigaaga jooga.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" title="TikTok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="social-link" title="WhatsApp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Qaybaha Degdegga ah</h4>
+        <ul class="footer-links">
+          <li><a href="#categories" onclick="filterByCategory('Raashinka iyo cuntada')">Raashinka & Cuntada</a></li>
+          <li><a href="#categories" onclick="filterByCategory('Khudaarta cusub')">Khudaarta Cusub</a></li>
+          <li><a href="#categories" onclick="filterByCategory('Miraha cusub')">Miraha Cusub</a></li>
+          <li><a href="#categories" onclick="filterByCategory('Cabitaannada')">Cabitaannada</a></li>
+          <li><a href="#categories" onclick="filterByCategory('Hilibka iyo kalluunka')">Hilibka & Kalluunka</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Xiriirro Muhiim ah</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Bogga Hore</a></li>
+          <li><a href="#products">Dhammaan Alaabta</a></li>
+          <li><a href="#delivery">Shuruudaha Delivery-ga</a></li>
+          <li><a href="javascript:void(0)" onclick="openTrackModal()">La Soco Dalabkaaga</a></li>
+          <li><a href="#about">Annaga Nagu Saabsan</a></li>
+          <li><a href="#contact">Nala Soo Xiriir</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Saacadaha & Bixinta</h4>
+        <p class="footer-timing">
+          <i class="fa-solid fa-clock"></i> <strong>Sabti - Jimco:</strong><br>
+          7:00 AM - 11:00 PM (Habeennimo)
+        </p>
+        <div class="payment-methods-showcase">
+          <span class="pay-tag"><i class="fa-solid fa-money-bill-1-wave"></i> Kaash</span>
+          <span class="pay-tag"><i class="fa-solid fa-mobile-screen"></i> EVC Plus</span>
+          <span class="pay-tag"><i class="fa-solid fa-phone"></i> Zaad / Sahal</span>
+          <span class="pay-tag"><i class="fa-solid fa-wallet"></i> e-Dahab</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Educational Project Notice & Copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 <strong>Haybad Supermarket</strong>. Dhammaan xuquuqdu way dhowran tahay.</p>
+        <p class="project-demo-disclaimer">
+          <i class="fa-solid fa-circle-exclamation"></i> <strong>Xusuusin:</strong> Mashruucani waa mid waxbarasho iyo tusaale ah (Demo Project), looguma talagelin dukaamaysi dhab ah oo lacag lagu bixinayo.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS & DRAWERS ==================== -->
+
+  <!-- 1. SHOPPING CART DRAWER (GAARIGA WAX IIBSIGA) -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Gaariga Wax Iibsiga" aria-hidden="true">
+    
+    <div class="cart-header">
+      <div class="cart-title-wrapper">
+        <i class="fa-solid fa-basket-shopping text-emerald"></i>
+        <h3>Gaariga Wax Iibsiga</h3>
+        <span class="cart-item-badge" id="cartHeaderBadge">0 alaab</span>
+      </div>
+      <button type="button" class="btn-close-cart" onclick="closeCart()" aria-label="Xidh gaariga">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="free-delivery-progress" id="freeDeliveryProgressContainer">
+      <div class="progress-message" id="freeDeliveryMessage">
+        Ku dar $30.00 si aad u hesho Delivery bilaash ah!
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="deliveryProgressBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scrollable List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated via JavaScript -->
+    </div>
+
+    <!-- Cart Empty State -->
+    <div class="cart-empty-view hidden" id="cartEmptyView">
+      <div class="empty-cart-icon">
+        <i class="fa-solid fa-cart-arrow-down"></i>
+      </div>
+      <h4>Gaarigaagu waa maran yahay!</h4>
+      <p>Weli kuma aadan darin wax alaab ah gaarigaaga wax iibsiga.</p>
+      <button type="button" class="btn btn-primary" onclick="closeCart(); document.getElementById('products').scrollIntoView({behavior: 'smooth'});">
+        <i class="fa-solid fa-bag-shopping"></i> Bilow Dukaamaysiga
+      </button>
+    </div>
+
+    <!-- Cart Footer & Totals -->
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-summary-rows">
+        <div class="summary-row">
+          <span>Wadarta Alaabta:</span>
+          <span class="summary-val" id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Kharashka Delivery-ga:</span>
+          <span class="summary-val text-emerald" id="cartDeliveryFee">$2.00</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>Wadarta Guud:</span>
+          <span class="summary-val grand-total" id="cartGrandTotal">$0.00</span>
+        </div>
+      </div>
+
+      <div class="cart-action-buttons">
+        <button type="button" class="btn btn-outline-danger btn-sm" onclick="clearCartConfirm()">
+          <i class="fa-regular fa-trash-can"></i> Faaruqi Gaariga
+        </button>
+        <button type="button" class="btn btn-primary btn-checkout" onclick="openCheckoutModal()">
+          <i class="fa-solid fa-credit-card"></i> Gudub Dalabka (Checkout)
+        </button>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- 2. CHECKOUT & DELIVERY ORDER MODAL -->
+  <div class="modal-backdrop" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+    <div class="modal-dialog checkout-dialog">
+      
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <i class="fa-solid fa-truck-fast text-emerald"></i>
+          <div>
+            <h3 id="checkoutModalTitle">Dhameystir Dalabkaaga Delivery-ga</h3>
+            <p class="modal-subtitle">Geli xogtaada si aan alaabta kuugu soo gaarsiinno daqiiqado gudahood.</p>
+          </div>
+        </div>
+        <button type="button" class="btn-modal-close" onclick="closeCheckoutModal()" aria-label="Xidh daaqadda">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body checkout-body">
+        
+        <!-- Left: Customer Form -->
+        <div class="checkout-form-column">
+          <form id="checkoutForm" novalidate onsubmit="handleCheckoutSubmit(event)">
+            
+            <h4 class="form-section-heading"><i class="fa-solid fa-user"></i> 1. Xogta Macmiilka</h4>
+            
+            <div class="form-group">
+              <label for="custName">Magacaaga oo Buuxa <span class="required">*</span></label>
+              <input type="text" id="custName" class="form-input" placeholder="Tusaale: Axmed Cali Maxamed" required>
+              <span class="error-msg" id="custNameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="custPhone">Lambarka Telefoonka (Hormuud / Somtel) <span class="required">*</span></label>
+              <div class="phone-input-wrapper">
+                <span class="phone-prefix">+252</span>
+                <input type="tel" id="custPhone" class="form-input" placeholder="61XXXXXXX ama 62XXXXXXX" required>
+              </div>
+              <span class="error-msg" id="custPhoneError"></span>
+              <span class="field-hint">Geli lambar sax ah oo aan kula soo xiriiri karno marka alaabta la sido.</span>
+            </div>
+
+            <h4 class="form-section-heading mt-4"><i class="fa-solid fa-map-location-dot"></i> 2. Cinwaanka Delivery-ga</h4>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="custDistrict">Degmada ama Xaafadda <span class="required">*</span></label>
+                <select id="custDistrict" class="form-select" required>
+                  <option value="">-- Dooro Degmadaada --</option>
+                  <option value="Hodan">Hodan (Taleex, KM4, Tarabuunka)</option>
+                  <option value="Waaberi">Waaberi (Airporka, 21-ka Oktoobar)</option>
+                  <option value="Howlwadaag">Howlwadaag (Bakaaraha, Sayidka)</option>
+                  <option value="Cabdicasis">Cabdicasiis (Liido, Marino)</option>
+                  <option value="Kaaraan">Kaaraan & Shibis</option>
+                  <option value="Wadajir">Wadajir / Madiina (Danwadaagaha)</option>
+                  <option value="Heliwaa">Heliwaa & Yaaqshiid</option>
+                  <option value="Dharkenley">Dharkenley & Kaxda</option>
+                  <option value="Hargeysa">Hargeysa (Xarunta)</option>
+                  <option value="Magaalo Kale">Magaalo / Deegaan Kale</option>
+                </select>
+                <span class="error-msg" id="custDistrictError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="custAddress">Cinwaanka Tooska ah (Waddada ama Aqalka) <span class="required">*</span></label>
+              <input type="text" id="custAddress" class="form-input" placeholder="Tusaale: Waddada Wadnaha, Guriga nambarkiisu yahay #42" required>
+              <span class="error-msg" id="custAddressError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="custNotes">Tilmaamo Dheeraad ah oo ku saabsan goobta (Ikhtiyaari)</label>
+              <textarea id="custNotes" class="form-textarea" rows="2" placeholder="Tusaale: Ka dambeeya Masjidka ama ka soo horjeedka Iskuulka..."></textarea>
+            </div>
+
+            <h4 class="form-section-heading mt-4"><i class="fa-solid fa-wallet"></i> 3. Habka Lacag-Bixinta</h4>
+            
+            <div class="payment-selection-group">
+              <label class="payment-radio-card active">
+                <input type="radio" name="paymentMethod" value="Kaash Marka Alaabta La Keeno" checked>
+                <div class="payment-card-content">
+                  <div class="pay-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                  <div>
+                    <strong>Kaash Marka Alaabta La Keeno (Cash on Delivery)</strong>
+                    <span>Bixi lacagta marka aad alaabta gacanta ku dhigto oo aad hubiso.</span>
+                  </div>
+                </div>
+              </label>
+
+              <label class="payment-radio-card">
+                <input type="radio" name="paymentMethod" value="Mobile Money (EVC Plus / Zaad / Sahal / e-Dahab)">
+                <div class="payment-card-content">
+                  <div class="pay-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                  <div>
+                    <strong>Mobile Payment (EVC Plus / Zaad / Sahal / e-Dahab)</strong>
+                    <span>Waxaad bixin kartaa lambar kasta oo mobile ah marka wadihii kuu yimaado.</span>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="backend-notice-box">
+              <i class="fa-solid fa-circle-info"></i>
+              <span><strong>Ogeysiis:</strong> Lacag-bixinta online-ka ah ee tooska ah waxay u baahan tahay server backend ah. Tani waa tusaale aamin ah oo waxbarasho ah.</span>
+            </div>
+
+            <!-- Submit Button Inside Form -->
+            <button type="submit" class="btn btn-primary btn-block btn-lg mt-4" id="btnConfirmOrder">
+              <i class="fa-solid fa-shield-check"></i> Xaqiiji oo Dir Dalabka
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Right: Order Summary Breakdown -->
+        <div class="checkout-summary-column">
+          <div class="order-summary-box">
+            <h4><i class="fa-solid fa-receipt"></i> Liiska Dalabkaaga</h4>
+            
+            <div class="checkout-items-list" id="checkoutItemsList">
+              <!-- Dynamically populated -->
+            </div>
+
+            <div class="checkout-calc-table">
+              <div class="calc-row">
+                <span>Wadarta Alaabta:</span>
+                <span id="checkoutSubtotal">$0.00</span>
+              </div>
+              <div class="calc-row">
+                <span>Kharashka Delivery-ga:</span>
+                <span class="text-emerald" id="checkoutDelivery">$2.00</span>
+              </div>
+              <div class="calc-row total-calc-row">
+                <strong>Wadarta Guud ee Dalabka:</strong>
+                <strong class="text-emerald font-bold" id="checkoutGrandTotal">$0.00</strong>
+              </div>
+            </div>
+
+            <div class="guarantee-badge">
+              <i class="fa-solid fa-circle-check text-emerald"></i>
+              <span>Haddii aad ku qanci weydo alaabta, waad soo celin kartaa isla waqtigaas!</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. ORDER CONFIRMATION / SUCCESS MODAL -->
+  <div class="modal-backdrop" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+    <div class="modal-dialog success-dialog">
+      <div class="success-card text-center">
+        
+        <div class="success-checkmark-circle">
+          <i class="fa-solid fa-check"></i>
+        </div>
+
+        <h3 id="successModalTitle">Hambalyo! Dalabkaagu Si Guul Leh Ayuu U Dhacay</h3>
+        <p class="success-desc">
+          Waad ku mahadsan tahay inaad wax ka iibsato <strong>Haybad Supermarket</strong>. Kooxdayadu waxay hadda diyaarinaysaa alaabtaada, wadaha delivery-gana wuxuu kugu soo gaari doonaa 30-45 daqiiqo gudahood.
+        </p>
+
+        <!-- Order ID Highlight Box -->
+        <div class="order-id-highlight-box">
+          <span class="order-id-label">Lambarka Aqoonsiga Dalabkaaga (Order ID):</span>
+          <div class="order-id-display">
+            <strong id="successOrderId">HYB-000000</strong>
+            <button type="button" class="btn-copy-id" id="btnCopyOrderId" onclick="copyOrderId()" title="Koobiyeey Lambarka">
+              <i class="fa-regular fa-copy"></i> Koobiyeey
+            </button>
+          </div>
+        </div>
+
+        <!-- Success Order Details Table -->
+        <div class="success-details-summary" id="successOrderSummary">
+          <!-- Summary filled via JS -->
+        </div>
+
+        <div class="success-action-buttons">
+          <button type="button" class="btn btn-primary" onclick="trackFromSuccessModal()">
+            <i class="fa-solid fa-route"></i> La Soco Dalabkaaga Hadda
+          </button>
+          <button type="button" class="btn btn-outline" onclick="closeSuccessModal()">
+            <i class="fa-solid fa-house"></i> Ku Noqo Bogga Hore
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. ORDER TRACKING MODAL (LA SOCO DALABKA) -->
+  <div class="modal-backdrop" id="trackModal" role="dialog" aria-modal="true" aria-labelledby="trackModalTitle">
+    <div class="modal-dialog track-dialog">
+      
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <i class="fa-solid fa-location-crosshairs text-emerald"></i>
+          <div>
+            <h3 id="trackModalTitle">La Soco Xaaladda Dalabkaaga</h3>
+            <p class="modal-subtitle">Geli lambarka dalabkaaga (Order ID) si aad u ogaato heerka uu marayo.</p>
+          </div>
+        </div>
+        <button type="button" class="btn-modal-close" onclick="closeTrackModal()" aria-label="Xidh daaqadda">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body track-body">
+        
+        <!-- Track Search Input -->
+        <div class="track-search-box">
+          <div class="track-input-group">
+            <i class="fa-solid fa-barcode"></i>
+            <input type="text" id="trackOrderInput" placeholder="Tusaale: HYB-882104 ama geli lambarkii aad heshay...">
+            <button type="button" class="btn btn-primary" id="btnSearchTrack" onclick="handleTrackOrder()">
+              <i class="fa-solid fa-magnifying-glass"></i> Raadi
+            </button>
+          </div>
+          <span class="track-sample-hint">
+            💡 Tusaale aad hadda tijaabin karto: <button type="button" class="btn-sample-id" onclick="setTrackSampleId('HYB-882104')">HYB-882104</button>
+          </span>
+        </div>
+
+        <!-- Track Result Container -->
+        <div class="track-result-wrapper hidden" id="trackResultContainer">
+          
+          <div class="track-order-meta">
+            <div>
+              <span class="meta-label">Lambarka Dalabka:</span>
+              <strong id="trackDisplayId" class="text-emerald">HYB-000000</strong>
+            </div>
+            <div>
+              <span class="meta-label">Taariikhda:</span>
+              <span id="trackDisplayDate">--</span>
+            </div>
+            <div>
+              <span class="meta-label">Wadarta:</span>
+              <strong id="trackDisplayTotal" class="text-emerald">$0.00</strong>
+            </div>
+          </div>
+
+          <!-- 5-Step Order Status Progress Bar -->
+          <div class="order-progress-timeline">
+            
+            <div class="timeline-step" id="step1">
+              <div class="step-circle"><i class="fa-solid fa-clock"></i></div>
+              <div class="step-label">La sugayo xaqiijin</div>
+            </div>
+
+            <div class="timeline-step" id="step2">
+              <div class="step-circle"><i class="fa-solid fa-clipboard-check"></i></div>
+              <div class="step-label">La xaqiijiyey</div>
+            </div>
+
+            <div class="timeline-step" id="step3">
+              <div class="step-circle"><i class="fa-solid fa-boxes-packing"></i></div>
+              <div class="step-label">Alaabta waa la diyaarinayaa</div>
+            </div>
+
+            <div class="timeline-step" id="step4">
+              <div class="step-circle"><i class="fa-solid fa-motorcycle"></i></div>
+              <div class="step-label">Delivery-ga ayaa socda</div>
+            </div>
+
+            <div class="timeline-step" id="step5">
+              <div class="step-circle"><i class="fa-solid fa-house-chimney-check"></i></div>
+              <div class="step-label">Alaabta waa la gaarsiiyey</div>
+            </div>
+
+          </div>
+
+          <!-- Current Status Card -->
+          <div class="current-status-banner" id="currentStatusBanner">
+            <div class="status-badge-icon" id="statusBadgeIcon"><i class="fa-solid fa-spinner fa-spin"></i></div>
+            <div class="status-badge-info">
+              <h4 id="currentStatusTitle">Xaaladda Hadda</h4>
+              <p id="currentStatusDesc">Faahfaahinta heerka uu dalabku marayo.</p>
+            </div>
+          </div>
+
+          <!-- Demo Status Simulation Controls (Allows user to test the 5 states!) -->
+          <div class="demo-controls-box">
+            <span class="demo-label"><i class="fa-solid fa-flask"></i> Tijaabada Horumarka Dalabka (Demo):</span>
+            <div class="demo-buttons">
+              <button type="button" class="btn-demo-step" onclick="changeDemoStatus(1)">1. La sugayo</button>
+              <button type="button" class="btn-demo-step" onclick="changeDemoStatus(2)">2. Xaqiijiyey</button>
+              <button type="button" class="btn-demo-step" onclick="changeDemoStatus(3)">3. Diyaarin</button>
+              <button type="button" class="btn-demo-step" onclick="changeDemoStatus(4)">4. Wadada ku jira</button>
+              <button type="button" class="btn-demo-step" onclick="changeDemoStatus(5)">5. La Gaarsiiyey</button>
+            </div>
+            <p class="demo-explainer">
+              * Fiiro gaar ah: Shaashaddan la socodka waqtiga-dhabta ah waxay u baahan tahay server backend ah iyo nidaamka GPS-ka marka nidaamka si dhab ah loo hirgelinayo.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Track Not Found Message -->
+        <div class="track-not-found hidden" id="trackNotFoundMessage">
+          <i class="fa-solid fa-triangle-exclamation text-amber"></i>
+          <h4>Lama helin dalabka lambarkiisu yahay kan!</h4>
+          <p>Fadlan hubi in lambarku sax yahay, ama tijaabi lambarka tusaalaha ah: <strong>HYB-882104</strong>.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION (POPUP FOR ADD TO CART ETC) -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button type="button" class="btn-back-to-top hidden" id="btnBackToTop" title="Ku noqo kor" aria-label="Ku noqo kor">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
